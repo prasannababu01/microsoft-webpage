@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            outline: 0px;
+        }
+        nav{
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 30px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        .m{
+            position: relative;
+        }
+        .submenu{
+            position: absolute;
+            top: 100%;
+            background-color: rgb(242, 241, 239);
+            display: none;
+            flex-direction: column;
+            gap: 1px;
+            align-items: center;
+            border: 1px solid black;
+        }
+        .submenu div{
+            width: 150px;
+        
+        }
+        .m:hover .submenu{
+            display: flex;
+        }
+        .left{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .img{
+            width: 100px;
+            height: 50px;
+        }
+        .img img{
+            padding-top: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 80%;
+        }
+        .right{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .navi{
+            width: 100%;
+            height: 60px;
+            background-color: rgb(29, 29, 163);
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .win{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            text-align: center;
+            justify-content:center ;
+            align-items: center;
+            padding-top: 20px;
+            background-color: white;
+        }
+        .win div{
+            width: 200px;
+            height: 100px;
+        }
+        .img1{
+            width: 90%;
+            height: 65%;
+        }
+        .car{
+            width: 100%;
+            height: 80vh;
+            position: relative;
+        }
+        .cari{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+        }
+        .lc{
+            position: absolute;
+            top: 40%;
+            left: 30px;
+            font-size: 40px;
+            background-color: transparent;
+            box-sizing: border-box;
+            
+        }
+        .rc{
+            position: absolute;
+            top: 40%;
+            right: 30px;
+            font-size: 40px;
+            background-color: transparent;
+            box-sizing: border-box;
+            
+        }
+        .dot{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 30px;
+            color: blue;
+            box-sizing: border-box;
+        }
+
+        .surface , .business{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .surface div , .business div{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .surface div img , .business div img{
+            width: 100%;
+            height: 150px;
+        }
+        .xbox{
+            width: 100%;
+            height: 600px;
+            background: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Slim-Multi-Canvas-AEM-Game-Pass-Ultimate:VP4-1260x600");
+            animation: demo 20s linear alternate infinite;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        @keyframes demo {
+            0%{
+                background: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Slim-Multi-Canvas-AEM-Game-Pass-Ultimate:VP4-1260x600");
+                background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+            20%{
+                background: url("https://th.bing.com/th?id=OIP.BXsxvnDMc7nQyCkgX5DgLwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2");
+                background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+            40%{
+                background: url("https://th.bing.com/th/id/OIP.m9Ntc6ujHOVsz3nYYU7b8QHaEK?w=381&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+                background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+            60%{
+                background: url("https://th.bing.com/th/id/OIP.IcZmMbg_5PfGYbVufs5JywHaEK?w=329&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+                background-repeat: no-repeat;
+            background-size: 100% 100%;
+            }
+        }
+
+        .for{
+            width: 100%;
+            height: 50px;
+            padding: 60px;
+            box-sizing: border-box;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .social{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0px 50px;
+            box-sizing: border-box;
+            gap: 20px;
+            font-size: 20px;
+        }
+        .fot{
+            width: 100%;
+            height: 350px;
+            background-color: gainsboro;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            padding: 30px 50px;
+            box-sizing: border-box;
+        }
+        .menu{
+            width: 250px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 15px;
+            color: rgb(82, 80, 80);
+        }
+        .menu a{
+            text-decoration: none;
+            color: rgb(87, 85, 85);
+        }
+        footer{
+            width: 100%;
+            height: 20px;
+            background-color: gainsboro;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .f1{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .f2{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .acad{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 80px;
+        }
+        .hc{
+            width: 60%;
+            
+        }
+        h1{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 15px;
+            box-sizing: border-box;
+            font-size: 30px;
+            background-color: rgb(79, 148, 233);
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .cont{
+            width: 100%;
+            text-align: justify;
+            text-indent: 30px;
+            padding: 20px;  
+            box-sizing: border-box;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <div class="img"><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"/></div>
+            <div class="m">Micorsoft 365
+                <div class="submenu"><div>Windows app</div>
+                <div>AI</div>
+                <div>One Drive</div>
+                <div>Outlook</div></div>
+            </div>
+            <div class="m">Teams
+                <div class="submenu"><div>Meetings</div>
+                <div>Calls</div>
+                <div>Video Chats</div></div>
+            </div>
+            <div class="m">Copolit
+                <div class="submenu"><div>Xbox Games pass ultimate</div>
+                <div>Xbox LIVE Gold</div>
+                <div>PC Games</div>
+                <div>Windows digital games</div></div>
+            </div>
+            <div class="m">Windows
+                <div class="submenu"><div>MS Cloud</div>
+                <div>MS Security</div>
+                <div>Azure</div>
+                <div>Dynamics 365</div></div>
+            </div>
+            <div class="m">Surface
+                <div class="submenu"><div>Developer Center</div>
+                <div>Documentation</div>
+                <div>AppSource</div></div>
+            </div>
+            <div class="m">Xbox
+                
+            </div>
+            <div class="m">Support
+                
+            </div>
+        </div>
+        <div class="right">
+            <div>All Microsoft</div>
+            <div>Search <i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>Cart <i class="fa-solid fa-cart-shopping"></i></div>
+            <div><i class="fa-solid fa-user"></i></div>
+        </div>
+    </nav>
+    <div class="navi"><marquee width="100%" heigth="100%" direction="left" scrollamount="15">Require assistance with Microsoft 365? Call 0008004402127 to inquire or make a purchase. &gt;</marquee> </div>
+    <div class="car">
+       <img class="cari" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP4-1399x600"/>
+       <button class="lc" onclick="bkw()">&lt;</button>
+       <button class="rc" onclick="fun()">&gt;</button>
+       <div class="dot">
+        <i class="fa-solid fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
+       </div>
+    </div>
+    <div class="win">
+        <div><img class="img1" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"/><a href="#">Choose your Microsoft 365</a></div>
+        <div><img class="img1" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Xbox-Games-Consoles?wid=40&hei=40"/><a href="#">Shop Xbox games and consoles</a></div>
+        <div><img class="img1" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"/><a href="#">Get Windows 11</a></div>
+        <div><img class="img1" src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Surface-Devices?wid=40&hei=40"/><a href="#">Explore Surface devices</a></div>
+    </div>
+    <div class="surface">
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-5-M1-Platinum-01-1?wid=297&hei=167&fit=crop"/><h2>Surface Laptop 5</h2><p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p><a href="#">Learn more</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSX-CP-Xbox-Series-X?wid=297&hei=167&fit=crop"/><h2>Xbox Series X</h2><p>The fastest, most powerful Xbox ever.</p><a href="#">Shop Xbox Series X</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=297&hei=167&fit=crop"/><h2>Xbox Series S</h2><p>Next-gen performance in the smallest Xbox ever.</p><a href="#">Shop Xbox Series S</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Surface-Laptop-Studio-01-CP?wid=297&hei=167&fit=crop"/><h2>Surface Laptop Studio</h2><p>Flex your creative muscle on the most powerful Surface Laptop. Now available with Windows 11.</p><a href="#">Learn more</a></div>
+    </div>
+    <div class="xbox">
+        
+    </div>
+
+    <div class="acad"> 
+        <div class="hc">
+            <h1><span>what is microsoft</span><span><i class="fa-solid fa-arrow-down" onclick="ct(0)"></i></span></h1>
+            <div class="cont">Microsoft Corporation is an American multinational technology corporation headquartered in Redmond, Washington. Microsoft's best-known software products are the Windows line of operating systems, the Microsoft 365 suite of productivity applications, and the Edge web browser. Its flagship hardware products are the Xbox video game consoles and the Microsoft Surface lineup of touchscreen personal computers. Microsoft ranked No. 14 in the 2022 Fortune 500 rankings of the largest United States corporations by total revenue;[3] it was the world's largest software maker by revenue as of 2022. It is considered one of the Big Five American information technology companies, alongside Alphabet (parent company of Google), Amazon, Apple, and Meta.</div>
+            <h1><span>Uses of microsoft</span><span><i class="fa-solid fa-arrow-down" onclick="ct(1)"></i></span></h1>
+            <div class="cont">You can use MS Word in daily life and business to create professional-looking documents such as resumes, letters, applications, forms, brochures, templates, business cards, calendars, reports, eBooks, and newsletters with high speed, quality, and accuracy.
+                In this article, you can learn about the various uses of Microsoft Word in your daily life. A complete guide so you can be able to use Microsoft Word.
+                Microsoft Word is a powerful, proven, and professional application software. Microsoft Word application is the easiest word processing program developed by Microsoft Inc. to create personal, business, marketing, educational, and workplace documents. And you can also start a good online business by applying basic Word skills.</div>
+            <h1><span>Support</span><span><i class="fa-solid fa-arrow-down" onclick="ct(2)"></i></span></h1>
+            <div class="cont">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi facere dolores quia voluptatem nihil excepturi, odit distinctio reiciendis molestias est perspiciatis unde dolorem voluptatum, quasi earum dolorum delectus corporis? Optio veniam eveniet ipsam sunt nulla? Doloribus autem minima, veniam mollitia hic expedita sequi commodi eaque aliquid neque. Laudantium possimus, distinctio adipisci eveniet necessitatibus quaerat doloremque. Eos deserunt voluptas necessitatibus nostrum consequuntur aut placeat ullam, natus corrupti sapiente similique tempora est aspernatur, officia rem dolor facilis mollitia minus quos! Facere quia perspiciatis non, harum odio nulla deleniti nemo cumque dolore delectus neque repellendus quibusdam repellat quaerat eum laudantium pariatur impedit, ad vel quo eius veritatis laborum doloribus. Officia maiores quae consectetur placeat dolore, eveniet id numquam veritatis harum aut iste. Impedit officia veniam maiores facilis esse tenetur a optio eius magni! Harum ipsam laboriosam cupiditate culpa ratione porro consequuntur. Voluptatem qui consequatur quam sint ducimus voluptatibus eum praesentium, delectus provident hic beatae nihil perspiciatis. Ea et totam omnis est earum nobis aperiam, animi, harum, eligendi quo a iste quos repudiandae reiciendis autem? Facilis aliquam reiciendis in, harum, perferendis minima voluptate ducimus dignissimos repellat labore ex. Modi, fugiat molestias enim consequuntur laudantium dicta blanditiis. Ipsa similique distinctio quis officia officiis. Placeat, autem!</div>
+            <h1><span>services</span><span><i class="fa-solid fa-arrow-down" onclick="ct(3)"></i></span></h1>
+            <div class="cont">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed adipisci maxime perspiciatis dicta repellat recusandae, non necessitatibus sunt voluptatem voluptate labore. Error odit sint earum beatae vitae minus eveniet quidem nobis modi eos voluptate soluta eius suscipit cumque magni ex, quam quis sequi recusandae repellat consequuntur ipsa atque iste. Eligendi temporibus, obcaecati non soluta animi repudiandae eaque eos repellat optio assumenda quia quo saepe eum et quisquam nesciunt. Quos deserunt, sint sit accusantium excepturi possimus corporis similique, vel enim doloremque culpa rem, vero voluptates molestias nam. Voluptatibus laboriosam odio, commodi magni aperiam quibusdam delectus quisquam ipsum maxime! Tempora obcaecati eligendi soluta eius quisquam, beatae maiores quibusdam voluptatem, consequatur tenetur fuga incidunt laboriosam! Sint est autem provident exercitationem qui eveniet reprehenderit a saepe excepturi explicabo, modi, ut in. Omnis modi nulla repudiandae dolores consequuntur minima earum ex laborum! Iure assumenda sapiente expedita, aut totam provident necessitatibus, minima illum alias adipisci exercitationem.</div>
+            <h1><span>Highlights</span><span><i class="fa-solid fa-arrow-down" onclick="ct(4)"></i></span></h1>
+            <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quaerat laudantium reprehenderit. Sunt ea dolore ipsam doloribus. Nostrum ad veritatis dolores quod blanditiis esse rerum ab, harum, recusandae dolore nobis autem asperiores! Perspiciatis, ducimus provident? Porro deleniti officia voluptatibus inventore ratione, suscipit consectetur atque, laudantium dolorum molestiae eligendi nam corporis repellat nemo animi maxime ad, aspernatur similique natus minus et eius? Suscipit provident optio pariatur eos dicta obcaecati fuga commodi reiciendis qui voluptatem, culpa doloremque rerum nisi iusto vero nesciunt laudantium ducimus aliquid necessitatibus exercitationem, ratione iste quaerat accusamus tempore. Omnis quisquam tempore magnam suscipit voluptatibus iusto dolor earum repudiandae!</div>
+        </div>
+    </div>
+
+    <div class="for">For business</div>
+    <div class="business">
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Surf-CP-SurfaceFamilyForBusiness?wid=297&hei=167&fit=crop"/><h2>Surface for Business</h2><p>No matter what you do, there’s a Surface to help you do it.</p><a href="#">Shop now</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Windows-11-Business?wid=297&hei=167&fit=crop"/><h2>Windows 11 for business</h2><p>Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all.</p><a href="#">Learn more</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=297&hei=167&fit=crop"/><h2>Get Microsoft Teams for free</h2><p>Online meetings, chat and shared cloud storage – all in one place.</p><a href="#">Sign up for free</a></div>
+        <div><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Visual-Studio-Icon?wid=297&hei=167&fit=crop"/><h2>Visual Studio 2022</h2><p>Get the most comprehensive IDE for .NET and C++ developers on Windows for building web, cloud, desktop, mobile apps, services and games.</p><a href="#">Download Visual Studio 2022</a></div>
+    </div>
+    <div class="social">
+        <div>Follow Microsoft</div>
+        <div><i class="fa-brands fa-facebook-f"></i></div>
+        <div><i class="fa-brands fa-x-twitter"></i></div>
+        <div><i class="fa-brands fa-youtube"></i></div>
+    </div>
+    <div class="fot">
+        <div class="menu"><h3>What's new</h3>
+<a href="#">Microsoft 365</a>
+<a href="#">Games</a>
+<a href="#">Surface Pro 9</a>
+<a href="#">Surface Laptop 5</a>
+<a href="#">Surface Laptop Go 2</a>
+<a href="#">Windows 11 apps</a>
+</div>
+        <div class="menu"><h3>Microsoft Store</h3><a href="#">Account profile</a>
+<a href="#">Download Center</a>
+<a href="#">Microsoft Store Support</a>
+<a href="#">Returns</a>
+<a href="#">Order tracking</a>
+</div>
+        <div class="menu"><h3>Education</h3>
+        <a href="#">Microsoft in education</a>
+<a href="#">Devices for education</a>
+<a href="#">Microsoft Teams for Education</a>
+<a href="#">Microsoft 365 Education</a>
+<a href="#">Office Education</a>
+<a href="#">Educator training and development</a>
+<a href="#">Deals for students and parents</a>
+<a href="#">Azure for students</a>
+</div>
+        <div class="menu"><h3>Business</h3>
+        <a href="#">Microsoft Cloud</a>
+<a href="#">Microsoft Security</a>
+<a href="#">Azure</a>
+<a href="#">Dynamics 365</a>
+<a href="#">Microsoft 365</a>
+<a href="#">Microsoft Advertising</a>
+<a href="#">Microsoft Industry</a>
+<a href="#">Microsoft Teams</a>
+</div>
+        <div class="menu"><h3>Developer & IT</h3>
+            <a href="#">Developer Center</a>
+<a href="#">Documentation</a>
+<a href="#">Microsoft Learn</a>
+<a href="#">Microsoft Tech Community</a>
+<a href="#">Azure Marketplace</a>
+<a href="#">AppSource</a>
+<a href="#">Microsoft Power Platform</a>
+<a href="#">Visual Studio</a>
+        </div>
+        <div class="menu"><h3>Company</h3>
+        <a href="#">Careers</a>
+<a href="#">About Microsoft</a>
+<a href="#">Company news</a>
+<a href="#">Privacy at Microsoft</a>
+<a href="#">Investors</a>
+<a href="#">Security</a>
+<a href="#">Sustainability</a></div>
+    </div>
+    <footer>
+        <div class="f1">
+            <div><i class="fa-solid fa-earth-americas"></i> English (India)</div>
+            <div><i class="fa-solid fa-arrow-right"></i> Your Privacy Choices</div>
+        </div>
+        <div class="f2">
+            <div>Contact Microsoft</div>
+            <div>Privacy</div>
+            <div>Terms of use</div>
+            <div>Trademarks</div>
+            <div> About our ads</div>
+            <div> &copy; Microsoft 2023</div>
+        </div>
+    </footer>
+    <script>
+        let a=["https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP4-1399x600","https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Slim-Multi-Canvas-M365-Anthem-Attract-Image-Create:VP5-1920x600","https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero-image-x2-1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&qlt=90","https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17Hcz","https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17MqR"]
+        let tr=document.getElementsByClassName("cari")[0]
+        let i=0
+        let p=0
+        let dotref=document.querySelectorAll(".dot i")
+        let iref=document.querySelectorAll("h1 i")
+        let contref=document.getElementsByClassName("cont")
+        function fun(){
+            dotref[i].className="fa-regular fa-circle"
+            i++
+            if(i>4){
+                i=0
+            }
+            tr.src=a[i]
+            dotref[i].className="fa-solid fa-circle"
+        }
+        function bkw(){
+            dotref[i].className="fa-regular fa-circle"
+            i--
+            if(i<0){
+                i=4
+            }
+            tr.src=a[i]
+            dotref[i].className="fa-solid fa-circle"
+
+        }
+        setInterval(fun,5000)
+
+        function ct(ind){
+            if(p==ind){
+                if(iref[ind].classList.contains('fa-arrow-down'))
+                {
+                    iref[ind].className="fa-solid fa-arrow-up"
+                    contref[ind].style.display="block"
+                }
+                else{
+                    iref[ind].className="fa-solid fa-arrow-down"
+                    contref[ind].style.display="none"
+                }
+            }
+            else{
+                iref[p].className='fa-solid fa-arrow-down'
+                contref[p].style.display="none"
+                iref[ind].className='fa-solid fa-arrow-up'
+                contref[ind].style.display="block"
+                p=ind
+            }
+
+        }
+    </script>
+</body>
+</html>
